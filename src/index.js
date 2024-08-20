@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import One from './One.js';
 import Two from './Two.js';
 import Welcome from './Welcome.js';
+import Clock from './Clock.js';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -11,6 +12,7 @@ root.render(
     <One />
     <Two />
     <Welcome name='Andy' />
+    <Clock />
   </>
 );
 
