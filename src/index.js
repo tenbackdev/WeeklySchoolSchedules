@@ -8,6 +8,10 @@ import Toggle from './Toggle.js';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
+let uniqueId = 0
+const listOfDays = days.map((day) => <li key={uniqueId++}>{day}</li>)
+
 root.render(
   <>
     <One />
@@ -15,6 +19,7 @@ root.render(
     <Welcome name='Andy' />
     <Clock />
     <Toggle />
+    <ul>{listOfDays}</ul>
   </>
 );
 
