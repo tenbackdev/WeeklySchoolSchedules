@@ -5,6 +5,7 @@ import Two from './Two.js';
 import Welcome from './Welcome.js';
 import Clock from './Clock.js';
 import Toggle from './Toggle.js';
+import GetName from './GetName.js';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -20,6 +21,7 @@ root.render(
     <Clock />
     <Toggle />
     <ul>{listOfDays}</ul>
+    <GetName />
   </>
 );
 
