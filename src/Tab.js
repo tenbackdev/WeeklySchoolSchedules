@@ -9,7 +9,7 @@ const listOfDays = days.map((day) => <li key={uniqueId++}>{day}</li>)
 class Tab extends React.Component {
     render() {
         return (
-            <div id={`tab${this.props.studentName}`} className="studentTab" style={{display: this.props.isVisible ? 'block' : 'none'}}> 
+            <div key={uniqueId++} id={`tab${this.props.studentName}`} className="studentTab" style={{display: this.props.isVisible ? 'block' : 'none'}}> 
                 <p>This is the detail within {this.props.studentName}'s tab.</p>
                 <label className="switch switchLabel">
                     <input type="checkbox" className="input" />
@@ -19,8 +19,7 @@ class Tab extends React.Component {
                     <h2>Breakfast</h2>
                     <form>
                         {days.map((item, index) => (
-                            
-                                <fieldset>
+                                <fieldset key={uniqueId++}>
                                     <legend>{item}</legend>
                                     <label>
                                         <input type="radio" name={`${item}Breakfast`} value="false" />Home
@@ -37,7 +36,7 @@ class Tab extends React.Component {
                     <form>
                         {days.map((item, index) => (
                             
-                                <fieldset>
+                                <fieldset key={uniqueId++}>
                                     <legend>{item}</legend>
                                     <label>
                                         <input type="radio" name={`${item}Lunch`} value="false" />Home
