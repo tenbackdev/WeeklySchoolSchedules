@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import './index.css';
 import One from './One.js';
 import Two from './Two.js';
 import Welcome from './Welcome.js';

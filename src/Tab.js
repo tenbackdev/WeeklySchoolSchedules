@@ -48,7 +48,6 @@ class Tab extends React.Component {
                         ))}
                     </form>
                 </div>
-                <ul>{listOfDays}</ul>
             </div>
         )
     }

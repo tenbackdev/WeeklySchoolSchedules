@@ -15,7 +15,7 @@ class Toggle extends React.Component {
         const show = this.state.isVisible
 
         return (
-            <div>
+            <div id="toggle">
                 <button onClick={this.handleClick}>
                     {show ? 'HIDE' : 'DISPLAY'}
                 </button>

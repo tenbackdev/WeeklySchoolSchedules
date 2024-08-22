@@ -1,0 +1,4 @@
+
+#root > ul, #root > p, #root > h1, #toggle, #root > form {
+    display: none;
+}
