@@ -12,12 +12,18 @@ code {
     monospace;
 }
 
-@media print {
-
-
-  #tabManager {
-    display: inline;
-    background-color: blue;
-    /*Not catching here: Will have to follow up here.*/
-  }
+h1 {
+  text-align: center;
 }
+
+.container {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+
