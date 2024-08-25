@@ -8,20 +8,22 @@ class Student extends React.Component {
                 <div className="studentForm">
                     <div className="breakfast">
                         <h2 className="student col-lg-12 col-md-12 col-sm-12 col-12">Breakfast</h2>
-                        <form>
-                            <div className="row">
-                                <fieldset className="mealChoice">
-                                    <legend className="col-form-label col-lg-6 col-md-6 col-sm-6 col-6">Monday</legend>
-                                    <div className="form-check col-lg-3 col-md-3 col-sm-3 col-3">
-                                        <label className="form-check-label">Home</label>
-                                        <input className="form-check-input" type="radio" name="mondayBreakfast" value="false" />
-                                    </div>
-                                    <div className="form-check col-lg-3 col-md-3 col-sm-3 col-3">
-                                        <label className="form-check-label">School</label>
-                                        <input className="form-check-input" type="radio" name="mondayBreakfast" value="true" />
+                        <form className="container">
+                            
+                                <fieldset className="mealChoice col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div className="row">
+                                        <legend className="col-form-label col-lg-4 col-md-4 col-sm-4 col-4">Monday</legend>
+                                        <div className="form-check col-lg-3 col-md-3 col-sm-3 col-3">
+                                            <label className="form-check-label col-lg-2 col-md-2 col-sm-2 col-2">Home</label>
+                                            <input className="form-check-input col-lg-1 col-md-1 col-sm-1 col-1" type="radio" name="mondayBreakfast" value="false" />
+                                        </div>
+                                        <div className="form-check col-lg-3 col-md-3 col-sm-3 col-3">
+                                            <label className="form-check-label col-lg-2 col-md-2 col-sm-2 col-2">School</label>
+                                            <input className="form-check-input col-lg-1 col-md-1 col-sm-1 col-1" type="radio" name="mondayBreakfast" value="true" />
+                                        </div>
                                     </div>
                                 </fieldset>
-                            </div>
+                            
                         </form>
                     </div>
                 </div>
