@@ -11,15 +11,15 @@ class Student extends React.Component {
                         <form className="container">
                             
                                 <fieldset className="mealChoice col-lg-12 col-md-12 col-sm-12 col-12">
-                                    <div className="row">
-                                        <legend className="col-form-label col-lg-4 col-md-4 col-sm-4 col-4">Monday</legend>
-                                        <div className="form-check col-lg-3 col-md-3 col-sm-3 col-3">
-                                            <label className="form-check-label col-lg-2 col-md-2 col-sm-2 col-2">Home</label>
-                                            <input className="form-check-input col-lg-1 col-md-1 col-sm-1 col-1" type="radio" name="mondayBreakfast" value="false" />
+                                    <div className="row align-items-center">
+                                        <legend className="radio-button-legend col-lg-4 col-md-4 col-sm-4 col-4">Monday</legend>
+                                        <div className="radio-button-name col-lg-4 col-md-4 col-sm-4 col-4">
+                                            <input className="" type="radio" name="mondayBreakfast" value="false" />
+                                            <label className="">Home</label>
                                         </div>
-                                        <div className="form-check col-lg-3 col-md-3 col-sm-3 col-3">
-                                            <label className="form-check-label col-lg-2 col-md-2 col-sm-2 col-2">School</label>
-                                            <input className="form-check-input col-lg-1 col-md-1 col-sm-1 col-1" type="radio" name="mondayBreakfast" value="true" />
+                                        <div className="radio-button-name col-lg-4 col-md-4 col-sm-4 col-4">
+                                            <input className="" type="radio" name="mondayBreakfast" value="true" />
+                                            <label className="">School</label>
                                         </div>
                                     </div>
                                 </fieldset>
