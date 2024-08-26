@@ -29,7 +29,7 @@ class Students extends React.Component {
                             onClick={() => this.toggleVisibility(index)}>{item}</button>
                     ))}
                 </div>
-                <div className="col-lg-12 col-md-12 col-sm-12 col-12">
+                <div>
                     {students.map((item, index) => (
                         <Student key={`tab${item}`} studentName={item} isVisible={this.state.visibleStudents[index]}/>
                     ))}
