@@ -25,7 +25,7 @@ class Students extends React.Component {
                 <div className="row buttons">
                     {students.map((item, index) => (
                         <button key={`buttonStudent${index}`}
-                            className={`col-lg-${bootstrapColumns} col-md-${bootstrapColumns} col-sm-${bootstrapColumns} col-${bootstrapColumns}`}
+                            className={`${this.state['visibleStudents'][index] === true ? 'button-selected' : 'button-not-selected'} col-lg-${bootstrapColumns} col-md-${bootstrapColumns} col-sm-${bootstrapColumns} col-${bootstrapColumns}`}
                             onClick={() => this.toggleVisibility(index)}>{item}</button>
                     ))}
                 </div>

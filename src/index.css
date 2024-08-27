@@ -1,3 +1,11 @@
+:root {
+  --primary-background: #F5F5F5;
+  --primary-accent: #3B82F6;
+  --secondary-accent: #10B981;
+  --text-color: #333333;
+  --button-highlight: #F97316;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,6 +13,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--primary-background);
+  color: var(--text-color);
 }
 
 code {
@@ -14,6 +24,15 @@ code {
 
 h1, h2 {
   text-align: center;
+  color: var(--text-color);
+}
+
+h2 {
+  background-color: var(--secondary-accent);
+}
+
+.week-of {
+  background-color: var(--primary-accent);
 }
 
 .container {
@@ -26,9 +45,25 @@ h1, h2 {
   margin-right: 0px;
 }
 
+.buttons > button {
+  border: none;
+  margin: 5px 0px 5px 0px;
+  padding: 0px;
+}
+
+.button-selected {
+  background-color: var(--button-highlight);
+  color: var(--text-color);
+}
+
 .student, .radio-button-name {
   padding-left: 0px;
   padding-right: 0px;
+}
+
+.mealChoice {
+  margin: 10px 0px;
+  padding: 0px;
 }
 
 .radio-button-name {
@@ -42,6 +77,7 @@ h1, h2 {
 .radio-button-legend {
   text-align: left;
   padding-left: 0px;
+  margin: 0px 0px;
 }
 
 .radio-button-name label, .radio-button-legend {
