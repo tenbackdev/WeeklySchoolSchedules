@@ -1,4 +1,21 @@
-
-#root > ul, #root > p, #root > h1, #toggle, #root > form {
+.no-print {
     display: none;
 }
+
+/* Show only elements with the print-only class */
+.print-only {
+    display: inline !important;
+}
+
+/* Ensure that certain elements within print-only sections, like table rows or cells, are shown */
+.print-only table, 
+.print-only tr, 
+.print-only td, 
+.print-only th {
+    display: table !important;
+    display: table-row !important;
+    display: table-cell !important;
+    display: table-header-group !important;
+}
+
+/* Optional: If you want to handle specific styles for certain elements within print-only, you can add more styles here */

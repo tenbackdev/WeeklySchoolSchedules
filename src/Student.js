@@ -25,7 +25,7 @@ class Student extends React.Component {
             <div className="student col-lg-12 col-md-12 col-sm-12 col-12" style={{display: this.props.isVisible ? 'block' : 'none'}}>
                 <p>{this.props.studentName} is my name, my whole body's made of glitter and I throw it in your face!</p>
                 <div className="studentForm">
-                    <div className="breakfast">
+                    <div className="breakfast no-print">
                         <h2 className="student col-lg-12 col-md-12 col-sm-12 col-12">Breakfast</h2>
                         {daysOfWeek.map((item, index) => (
                             <form key={`breakfast${item}`} className="container">
@@ -49,7 +49,7 @@ class Student extends React.Component {
                             </form>
                         ))}
                     </div>
-                    <div className="lunch">
+                    <div className="lunch no-print">
                         <h2 className="student col-lg-12 col-md-12 col-sm-12 col-12">Lunch</h2>
                         {daysOfWeek.map((item, index) => (
                             <form key={`lunch${item}`} className="container">
@@ -74,7 +74,7 @@ class Student extends React.Component {
                         ))}
                     </div>
                 </div>
-                <div className="studentResults printOnly" style={{display: 'none'}}>
+                <div className="studentResults print-only">
                     <table>
                         <thead>
                             <tr>
