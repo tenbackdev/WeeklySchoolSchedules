@@ -1,3 +1,7 @@
+body {
+    background-color: white !important;
+}
+
 .no-print {
     display: none;
 }
@@ -8,14 +12,32 @@
 }
 
 /* Ensure that certain elements within print-only sections, like table rows or cells, are shown */
-.print-only table, 
-.print-only tr, 
-.print-only td, 
-.print-only th {
+.print-only table {
     display: table !important;
+    width: 100%;
+    border-collapse: collapse;
     display: table-row !important;
     display: table-cell !important;
     display: table-header-group !important;
 }
 
 /* Optional: If you want to handle specific styles for certain elements within print-only, you can add more styles here */
+
+.student-hide {
+    display: inline;
+}
+
+h1.week-of {
+    background-color: white;
+}
+
+h2.print-headers {
+    background-color: white;
+    color: blue;
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    text-align: center;
+    padding: 50px;
+    margin: 50px;
+}

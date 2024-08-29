@@ -22,7 +22,7 @@ class Students extends React.Component {
 
         return (
             <div className="container students">
-                <div className="row buttons">
+                <div className="row buttons no-print">
                     {students.map((item, index) => (
                         <button key={`buttonStudent${index}`}
                             className={`${this.state['visibleStudents'][index] === true ? 'button-selected' : 'button-not-selected'} col-lg-${bootstrapColumns} col-md-${bootstrapColumns} col-sm-${bootstrapColumns} col-${bootstrapColumns}`}
