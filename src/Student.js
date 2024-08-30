@@ -76,13 +76,13 @@ class Student extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className="studentResults print-only">
+                <div className="studentResults print-only student-whole">
                     <h2 className="print-headers print-only"> {this.props.studentName} </h2>
                     <table>
                         <thead>
                             <tr>
                                 <th></th>
-                                {daysOfWeek.map(item => (<th>{item}</th>))}
+                                {daysOfWeek.map((item, index) => (<th>{index === 3 ? item[1].toUpperCase() : item[0]}</th>))}
                             </tr>
                         </thead>
                         <tbody>
