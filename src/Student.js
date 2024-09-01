@@ -23,7 +23,7 @@ class Student extends React.Component {
     render() {
         return (
             <div>
-                <div className={`student col-lg-12 col-md-12 col-sm-12 col-12 ${this.props.isVisible ? 'student-hide' : ''}`}>
+                <div className={`student col-lg-12 col-md-12 col-sm-12 col-12 ${this.props.isVisible ? '' : 'student-hide'}`}>
                     <p className="no-print">{this.props.studentName} is my name, my whole body's made of glitter and I throw it in your face!</p>
                     <div className="studentForm">
                         <div className="breakfast no-print">

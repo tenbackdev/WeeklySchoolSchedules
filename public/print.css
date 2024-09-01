@@ -9,17 +9,18 @@ body {
 /* Show only elements with the print-only class */
 .print-only {
     display: inline !important;
-    font-size: 2rem;
+    font-size: 18pt;
 }
 
 .student-whole {
     display: grid !important;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Ensure that certain elements within print-only sections, like table rows or cells, are shown */
 .print-only table {
     display: table !important;
-    width: 100%;
     border-collapse: collapse;
     display: table-row !important;
     display: table-cell !important;
@@ -28,19 +29,23 @@ body {
 }
 
 th, td {
-    padding: 5px;
-    border: 1px solid black;
+    padding: 5pt;
+    border: 2pt solid black;
     text-align: center;
+    font-size: 14pt;
 }
 
 /* Make the first column auto width to fit content */
 th:first-child, td:first-child {
     white-space: nowrap;
-    width: 1%; 
     text-align: left;
     padding-right: 50px;
 }
 
+
+th:not(:first-child), td:not(:first-child) {
+    width: 70pt;
+}
 
 /* Optional: If you want to handle specific styles for certain elements within print-only, you can add more styles here */
 
@@ -50,7 +55,7 @@ th:first-child, td:first-child {
 
 h1.week-of {
     background-color: white;
-    font-size: 4.5rem;
+    font-size: 28px;
 }
 
 h2.print-headers {
@@ -60,7 +65,7 @@ h2.print-headers {
     grid-template-columns: 1fr;
     width: 100%;
     text-align: center;
-    padding: 30px;
-    margin: 20px;
-    font-size: 4rem;
+    padding: 15pt;
+    margin: 5pt;
+    font-size: 20pt;
 }
