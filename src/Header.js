@@ -9,8 +9,18 @@ export default function render() {
 function getMondayDate(currentDate = new Date()) {
     const date = new Date(currentDate);
     const day = date.getDay(); // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
-    const diff = day === 0 ? -6 : 1 - day; // Adjust when the day is Sunday (0) to get the last Monday
-    date.setDate(date.getDate() + diff);
+
+    if (day >= 1 && day <= 5) { // Monday to Friday
+        const diff = 1 - day; // Difference to get the previous Monday
+        date.setDate(date.getDate() + diff);
+    } else if (day === 6) { // Saturday 
+        const diff = 2; // Difference to get the next Monday
+        date.setDate(date.getDate() + diff);
+    } else { //Sunday
+        const diff = 1;
+        date.setDate(date.getDate() + diff);
+    }
+
     return date;
 }
 
