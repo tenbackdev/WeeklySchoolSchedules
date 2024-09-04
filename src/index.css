@@ -1,4 +1,5 @@
 :root {
+    /*May look at using Contrast Ratio Tool of https://www.siegemedia.com/contrast-ratio#%23272727-on-%237d9bca*/
   --primary-background: #F5F5F5;
   --primary-accent: #7d9bca;
   --secondary-accent: #10B981;
@@ -26,4 +27,24 @@ body {
 
 .main-header > h2 {
   font-size: 1.5rem;
+}
+
+.day-selection {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.day-selection > button {
+  width: 16%;
+  border: none;
+  color: var(--text-color);
+  border-radius: 10%;
+}
+
+button.day-enabled {
+  background-color: var(--button-highlight);
+}
+
+button.day-disabled {
+  background-color: darkgray;
 }
