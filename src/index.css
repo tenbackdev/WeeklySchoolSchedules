@@ -1,91 +1,29 @@
 :root {
   --primary-background: #F5F5F5;
-  --primary-accent: #3B82F6;
+  --primary-accent: #7d9bca;
   --secondary-accent: #10B981;
-  --text-color: #333333;
+  --text-color: #272727;
   --button-highlight: #F97316;
 }
 
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   background-color: var(--primary-background);
+  font-family: 'Roboto', 'Lato', 'Open Sans';
   color: var(--text-color);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-h1, h2 {
+.main-header {
   text-align: center;
-  color: var(--text-color);
-}
-
-h2 {
-  background-color: var(--secondary-accent);
-}
-
-.week-of {
   background-color: var(--primary-accent);
+  position: sticky;
+  top: 0;
 }
 
-.container {
-  padding-left: 10px;
-  padding-right: 10px;
+.main-header > h1 {
+  font-size: 2rem;
+  margin: 0px;
 }
 
-.row {
-  margin-left: 0px;
-  margin-right: 0px;
-}
-
-.buttons > button {
-  border: none;
-  margin: 5px 0px 5px 0px;
-  padding: 0px;
-}
-
-.button-selected {
-  background-color: var(--button-highlight);
-  color: var(--text-color);
-}
-
-.student, .radio-button-name {
-  padding-left: 0px;
-  padding-right: 0px;
-}
-
-.mealChoice {
-  margin: 10px 0px;
-  padding: 0px;
-}
-
-.radio-button-name {
-  display: grid;
-  justify-content: center;
-  grid-template-columns: 1fr 5fr;
-  text-align: center;
-  align-items: center;
-}
-
-.radio-button-legend {
-  text-align: left;
-  padding-left: 0px;
-  margin: 0px 0px;
-}
-
-.radio-button-name label, .radio-button-legend {
-  margin-bottom: 0;
-  font-size: 1rem;
-  text-align:  left;
-}
-
-.print-only, .student-hide {
-  display: none;
+.main-header > h2 {
+  font-size: 1.5rem;
 }
