@@ -5,12 +5,26 @@
   --secondary-accent: #10B981;
   --text-color: #272727;
   --button-highlight: #F97316;
+  --button-disabled: darkgray
 }
 
 body {
   background-color: var(--primary-background);
   font-family: 'Roboto', 'Lato', 'Open Sans';
   color: var(--text-color);
+}
+
+button {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+button:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+button:focus {
+  outline: none;
 }
 
 .main-header {
@@ -31,14 +45,14 @@ body {
 
 .day-selection {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .day-selection > button {
-  width: 16%;
+  width: 17%;
   border: none;
   color: var(--text-color);
-  border-radius: 10%;
+  border-radius: 5px;
 }
 
 button.day-enabled {
@@ -46,5 +60,61 @@ button.day-enabled {
 }
 
 button.day-disabled {
-  background-color: darkgray;
+  background-color: var(--button-disabled);
+}
+
+.student-selection {
+  display: flex;
+  margin: 10px 0px;
+  justify-content: space-between;
+  gap: 2%;
+}
+
+.student-selection button {
+  flex-grow: 1;
+  border: none;
+  border-radius: 5px;
+  color: var(--text-color);
+  font-size: 1.25rem;
+}
+
+button.student-active {
+  background-color: var(--secondary-accent);
+}
+
+button.student-inactive {
+  background-color: var(--button-disabled);
+}
+
+.student > p {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.meal-header {
+  background-color: var(--primary-accent);
+}
+
+.student-nonvisible, div.day-meal-disabled {
+  display: none;
+}
+
+.meal-selection h3 {
+  text-align: center;
+}
+
+.student-meal {
+  display: grid;
+  grid-template-columns: 4fr 2fr 2fr;
+  align-items: center;
+  justify-content: center;
+}
+
+.student-meal p {
+  font-size: 1.5rem;
+  margin: 10px 5px;
+}
+
+.student-meal button {
+  flex-grow: 1;
 }
