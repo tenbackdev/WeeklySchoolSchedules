@@ -8,7 +8,8 @@ class App extends React.Component {
     constructor(props) {
         super(props)
 
-        const daysMealsMap = daysOfWeek.map((day) => [day, {breakfast: 'Home', lunch: 'Home'}]);        
+        const daysMealsMap = new Map(daysOfWeek.map((day) => [day, {breakfast: 'Home', lunch: 'Home'}]));       
+        //console.log(daysMealsMap) 
 
         const studentMap = students.reduce((acc, student, index) => {
             acc.set(student, {isVisible: index === 0 ? true : false,
@@ -50,7 +51,19 @@ class App extends React.Component {
     }
 
     handleMealChange(studentName, day, meal, choice) {
-        console.log(`These variables student: ${studentName}, day: ${day}, meal: ${meal}, choice: ${choice}`);
+        this.setState((prevState) => {
+            const newStudents = prevState.students;
+            const studentData = {...newStudents.get(studentName)};
+            const newMealsMap = new Map(studentData.meals);
+            const dayMeals = {...newMealsMap.get(day)};
+            dayMeals[meal] = choice;
+            newMealsMap.set(day, dayMeals);
+            studentData.meals = newMealsMap;
+            newStudents.set(studentName, studentData);
+            newStudents.get(studentName).meals.get(day)[meal] = choice;
+
+            return {students: newStudents};
+        });
     }
 
     render() {
