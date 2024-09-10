@@ -32,6 +32,7 @@ button:focus {
   background-color: var(--primary-accent);
   position: sticky;
   top: 0;
+  z-index: 99;
 }
 
 .main-header > h1 {
@@ -117,4 +118,22 @@ button.student-inactive {
 
 .student-meal button {
   flex-grow: 1;
+  border: none;
+  color: var(--text-color)
 }
+
+button.meal-home {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+button.meal-school {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+button.meal-active {
+  background-color: var(--secondary-accent);
+}
+
+
