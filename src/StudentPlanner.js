@@ -8,20 +8,20 @@ export default function StudentPlanner({isVisible, studentName, days, meals, onC
             {Array.from(days).map(([day, value]) => (
                         <div key={`breakfast${day}${studentName}`} className={`student-meal container ${!value ? 'day-meal-disabled': 'day-meal-enabled'}`}>
                             <p className='test'>{day}</p>
-                            <button className={meals.get(day).breakfast === 'Home' ? 'meal-active' : 'meal-inactive'}
-                                onClick={() => onClickMethod(studentName, day, 'breakfast', 'home')}>Home</button>
-                            <button className={meals.get(day).breakfast === 'School' ? 'meal-active' : 'meal-inactive'}
-                                onClick={() => onClickMethod(studentName, day, 'breakfast', 'school')}>School</button>
+                            <button className={`meal-home ${meals.get(day).breakfast === 'Home' ? 'meal-active' : 'meal-inactive'}`}
+                                onClick={() => onClickMethod(studentName, day, 'breakfast', 'Home')}>Home</button>
+                            <button className={`meal-school ${meals.get(day).breakfast === 'School' ? 'meal-active' : 'meal-inactive'}`}
+                                onClick={() => onClickMethod(studentName, day, 'breakfast', 'School')}>School</button>
                         </div>
             ))}
             <h3 className='meal-header'>Lunch</h3>
             {Array.from(days).map(([day, value]) => (
                         <div key={`lunch${day}${studentName}`} className={`student-meal container ${!value ? 'day-meal-disabled': 'day-meal-enabled'}`}>
                             <p className='test'>{day}</p>
-                            <button className={meals.get(day).lunch === 'Home' ? 'meal-active' : 'meal-inactive'}
-                                onClick={() => onClickMethod(studentName, day, 'lunch', 'home')}>Home</button>
-                            <button className={meals.get(day).lunch === 'School' ? 'meal-active' : 'meal-inactive'}
-                                onClick={() => onClickMethod(studentName, day, 'lunch', 'school')}>School</button>
+                            <button className={`meal-home ${meals.get(day).lunch === 'Home' ? 'meal-active' : 'meal-inactive'}`}
+                                onClick={() => onClickMethod(studentName, day, 'lunch', 'Home')}>Home</button>
+                            <button className={`meal-school ${meals.get(day).lunch === 'School' ? 'meal-active' : 'meal-inactive'}`}
+                                onClick={() => onClickMethod(studentName, day, 'lunch', 'School')}>School</button>
                         </div>
             ))}
         </div>
