@@ -9,7 +9,6 @@ class App extends React.Component {
         super(props)
 
         const daysMealsMap = new Map(daysOfWeek.map((day) => [day, {breakfast: 'Home', lunch: 'Home'}]));       
-        //console.log(daysMealsMap) 
 
         const studentMap = students.reduce((acc, student, index) => {
             acc.set(student, {isVisible: index === 0 ? true : false,
@@ -25,6 +24,7 @@ class App extends React.Component {
         this.toggleDay = this.toggleDay.bind(this);
         this.toggleStudent = this.toggleStudent.bind(this);
         this.handleMealChange = this.handleMealChange.bind(this);
+        this.calcBreakfastLocation = this.calcBreakfastLocation.bind(this);
     }
 
     toggleDay(dayName) {
@@ -66,9 +66,23 @@ class App extends React.Component {
         });
     }
 
+    calcBreakfastLocation(meal) {
+        const decisionMap = new Map(
+            Array.from(this.state.days.entries()).map(([day, _]) => {
+                const studentChoiceArray = Array.from(this.state.students.entries()).map(([_, value]) => {
+                    return value.meals.get(day)[meal];
+                })
+                return [day, studentChoiceArray.some(studentChoice => studentChoice === 'Home') ? 'Home' : 'School'];
+        }));
+        return decisionMap;
+    }
+
     render() {
         const daysEntries = Array.from(this.state.days.entries())
         const studentsMap = Array.from(this.state.students.entries());
+        const breakfastLocationMap = this.calcBreakfastLocation('breakfast');
+
+        console.log(breakfastLocationMap)
 
         return (
             <div>
@@ -93,6 +107,7 @@ class App extends React.Component {
                             onClickMethod={this.handleMealChange} />
                     ))}
                 </div>
+
             
             </div>
 
@@ -102,3 +117,13 @@ class App extends React.Component {
 
 
 export default App;
+
+
+/*
+                <div>
+                    {studentsMap.map(([key, value]) => (
+                        <p>{this.calcBreakfastLocation('breakfast')}</p>
+                    ))}
+                </div>
+*/
+
