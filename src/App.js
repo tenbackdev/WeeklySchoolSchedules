@@ -2,6 +2,7 @@ import React from 'react'
 import DaySelector from './DaySelector.js'
 import StudentSelector from './StudentSelector.js'
 import StudentPlanner from './StudentPlanner.js'
+import PrintResults from './PrintResults.js'
 import {students, daysOfWeek} from './constants.js'
 
 class App extends React.Component {
@@ -86,6 +87,11 @@ class App extends React.Component {
 
         return (
             <div>
+                <div className='print-only'>
+                    {studentsMap.map(([key, value]) => (
+                        <PrintResults studentName={key} />
+                    ))}
+                </div>
                 <div className='day-selection col-lg-12 col-md-12 col-sm-12 col-12'>
                     {daysEntries.map(([key, value]) => (
                         <DaySelector key={`enable${key}`} dayName={key} dayEnabled={value} onClickMethod={this.toggleDay}/>
@@ -107,6 +113,7 @@ class App extends React.Component {
                             onClickMethod={this.handleMealChange} />
                     ))}
                 </div>
+                
 
             
             </div>
