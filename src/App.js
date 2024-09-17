@@ -82,14 +82,20 @@ class App extends React.Component {
         const daysEntries = Array.from(this.state.days.entries())
         const studentsMap = Array.from(this.state.students.entries());
         const breakfastLocationMap = this.calcBreakfastLocation('breakfast');
+        const busMap = new Map(Array.from(breakfastLocationMap).map(([key, value]) => [key, value === 'School' ? 'Bus' : 'Car']))
 
-        console.log(breakfastLocationMap)
+        console.log(breakfastLocationMap);
+        console.log(busMap);
 
         return (
             <div>
                 <div className='print-only'>
                     {studentsMap.map(([key, value]) => (
-                        <PrintResults studentName={key} />
+                        <PrintResults studentName={key} 
+                            days={this.state.days} 
+                            breakfast={breakfastLocationMap}
+                            meals={this.state.students.get(key).meals} 
+                            bus={busMap} />
                     ))}
                 </div>
                 <div className='day-selection col-lg-12 col-md-12 col-sm-12 col-12'>
