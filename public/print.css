@@ -1,0 +1,25 @@
+
+body {
+    display: none;
+    background-color: red;
+}
+
+.print-only, .print-only * {
+    display: block;
+    color: black;
+    background-color: blue;
+}
+
+.print-student-table {
+    display: table;
+}
+
+/*testing comments*/
+
+
+
+
+
+
+
+
