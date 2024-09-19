@@ -33,6 +33,10 @@ h2.print-only, h2.week-header {
     font-size: 50px;
     text-align: center;
     margin: 25pt;
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    color: transparent;
+    background-size: 15%;
 }
 
 .print-student-table {
@@ -42,7 +46,7 @@ h2.print-only, h2.week-header {
 
 th, td {
     padding: 5pt;
-    border: 2pt solid black;
+    border: 3pt solid black;
     text-align: center;
     font-size: 22pt;
     font-weight: 700;
