@@ -4,8 +4,7 @@ export default function render() {
     return (
         <div className="main-header col-lg-12 col-md-12 col-sm-12 col-12">
             <h1 className="">Meal Schedule</h1>
-            <h2>Week of {formatDate(getMondayDate())}</h2>
-            <h2 className="print-only">Week of {formatDate(getMondayDate())}</h2>
+            <h2 className="week-header">Week of {formatDate(getMondayDate())}</h2>
         </div>
         
     )
