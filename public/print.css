@@ -1,17 +1,60 @@
-
-body {
+/*
+div:not(.print-only) * {
     display: none;
-    background-color: red;
+}
+*/
+
+.main-header h1, .day-selection, .student-selection, .meal-selection {
+    display: none;
 }
 
-.print-only, .print-only * {
-    display: block;
+.print-only, div.print-only {
+    display: grid;
     color: black;
-    background-color: blue;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+div table {
+    align-items: center;
+}
+
+h2.print-only, h2.week-header {
+    font-size: 50px;
+    text-align: center;
+}
+
+.week-header {
+    margin-top: 50pt;
+}
+
+.print-student-header {
+    font-size: 50px;
+    text-align: center;
+    margin: 25pt;
 }
 
 .print-student-table {
     display: table;
+    align-items: center;
+}
+
+th, td {
+    padding: 5pt;
+    border: 2pt solid black;
+    text-align: center;
+    font-size: 22pt;
+    font-weight: 700;
+    height: 50pt;
+}
+
+th:first-child {
+    width: 150pt;
+}
+
+th:not(:first-child), td:not(:first-child) {
+    width: 120pt;
 }
 
 /*testing comments*/
