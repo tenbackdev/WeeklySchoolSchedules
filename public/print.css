@@ -61,6 +61,14 @@ th:not(:first-child), td:not(:first-child) {
     width: 120pt;
 }
 
+.print-day-disabled {
+    background-color: #e0e0e0;
+}
+
+tbody td.print-day-disabled {
+    font-size: 0;
+}
+
 /*testing comments*/
 
 
